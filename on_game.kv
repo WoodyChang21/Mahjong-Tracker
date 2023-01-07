@@ -1,0 +1,435 @@
+<On_game>:
+
+#on_game.py attributes 
+    #Winner toggle button
+    winner_one: winner_one
+    winner_two: winner_two
+    winner_three: winner_three
+    winner_four: winner_four
+
+    #Loser toggle button
+    loser_one: loser_one
+    loser_two: loser_two
+    loser_three: loser_three
+    loser_four: loser_four
+    self_touch: self_touch
+
+    #Dealer
+    dealer_one: dealer_one
+    dealer_two: dealer_two
+    dealer_three: dealer_three
+    dealer_four: dealer_four
+
+    #Player money
+    player_one_money: player_one_money
+    player_two_money: player_two_money
+    player_three_money: player_three_money
+    player_four_money: player_four_money
+
+    #Amount of money (text input)
+    amount_of_tai: amount_of_tai
+    
+    #Player background
+    player_one_background: player_one_background
+    player_two_background: player_two_background
+    player_three_background: player_three_background
+    player_four_background: player_four_background
+
+    #ROUND
+    round_E: round_E
+    round_S: round_S
+    round_W: round_W
+    round_N: round_N
+
+    
+    BoxLayout:
+        orientation: "vertical"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size: (self.size)
+            RelativeLayout:
+                canvas.before:
+                    Color:
+                        rgba: 1,1,1,1
+                    Rectangle:
+                        size: self.size
+                
+                BoxLayout:
+                    orientation: "vertical"
+                    size: self.parent.size
+                    padding: dp(20)
+                    spacing: dp(10)
+                    RelativeLayout:
+                        id: round
+                        size_hint: 1,.7
+                        BoxLayout:
+                            orientation: "horizontal"
+                            spacing: dp(20)
+                            pos_hint: {"center_x":.5}
+                            RelativeLayout:
+                                id: round_E
+                                round_color: (.2,.3,.1,.6)
+                                canvas.before:
+                                    Color:
+                                        rgba: self.round_color
+                                    Rectangle:
+                                        size: self.size
+                                Label:
+                                    text: "E"
+                                    color: 0,0,0,1
+                                    font_size: self.height*.5
+                                    font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            RelativeLayout:
+                                id: round_S
+                                round_color: (1,1,1,1)
+                                canvas.before:
+                                    Color:
+                                        rgba: self.round_color
+                                    Rectangle:
+                                        size: self.size
+                                Label:
+                                    text: "S"
+                                    color: 0,0,0,1
+                                    font_size: self.height*.5
+                                    font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            RelativeLayout:
+                                id: round_W
+                                round_color: (1,1,1,1)
+                                canvas.before:
+                                    Color:
+                                        rgba: self.round_color
+                                    Rectangle:
+                                        size: self.size
+                                Label:
+                                    text: "W"
+                                    color: 0,0,0,1
+                                    font_size: self.height*.5
+                                    font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            RelativeLayout:
+                                id: round_N
+                                round_color: (1,1,1,1)
+                                canvas.before:
+                                    Color:
+                                        rgba: self.round_color
+                                    Rectangle:
+                                        size: self.size
+                                Label:
+                                    text: "N"
+                                    color: 0,0,0,1
+                                    font_size: self.height*.5
+                                    font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                    RelativeLayout:
+                        id: player_one_background
+                        player_color:(.2,.3,.1,.3)
+                        canvas.before:
+                            Color:
+                                rgba: self.player_color
+                            Rectangle:
+                                size: self.size
+                        BoxLayout:
+                            orientation: "horizontal"
+                            Label:
+                                text:"E"
+                                color: 0,0,0,1
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.width*1.2
+                                size_hint: .1,1
+                            Label:
+                                id: dealer_one
+                                text: "0"
+                                color: .5,0,0,1
+                                size_hint: .5,1
+                                font_size: self.width*.2
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                
+                            Label:
+                                text:root.parent.player_one_name
+                                font_size: self.width*.08
+                                color: 0,0,0,1
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+
+                            Label: 
+                                id: player_one_money
+                                size_hint: .3,.5
+                                pos_hint: {"center_y":.5, "right": .5}
+                                text: '0'
+                                color: 0,0,0,1
+                                font_size: self.width*.25
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                    RelativeLayout:
+                        id: player_two_background
+                        player_color:(1,1,1,1)
+                        canvas.before:
+                            Color:
+                                rgba: self.player_color
+                            Rectangle:
+                                size: self.size
+                        BoxLayout:
+                            orientation: "horizontal"
+                            color: .1,.2,.1,1
+                            Label:
+                                text:"S"
+                                color: 0,0,0,1
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.width*1.2
+                                size_hint: .1,1
+                            Label:
+                                id: dealer_two
+                                text: ""
+                                color: .5,0,0,1
+                                size_hint: .5,1
+                                font_size: self.width*.2
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            Label:
+                                text:root.parent.player_two_name
+                                color: 0,0,0,1
+                                font_size: self.width*.08
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            Label:
+                                id: player_two_money
+                                size_hint: .3,.5
+                                pos_hint: {"center_y":.5, "right": .5}
+                                text: '0'
+                                color: 0,0,0,1
+                                font_size: self.width*.25
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                    RelativeLayout:
+                        id: player_three_background
+                        player_color:(1,1,1,1)
+                        canvas.before:
+                            Color:
+                                rgba: self.player_color
+                            Rectangle:
+                                size: self.size
+                        BoxLayout:
+                            orientation: "horizontal"
+                            color: .1,.2,.1,1
+                            Label:
+                                text:"W"
+                                color: 0,0,0,1
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.width*1.2
+                                size_hint: .1,1
+                            Label:
+                                id: dealer_three
+                                text: ""
+                                color: .5,0,0,1
+                                size_hint: .5,1
+                                font_size: self.width*.2
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            Label:
+                                text:root.parent.player_three_name
+                                font_size: self.width*.08
+                                color: 0,0,0,1
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            Label:
+                                id: player_three_money
+                                size_hint: .3,.5
+                                pos_hint: {"center_y":.5, "right": .5}
+                                text: '0'
+                                color: 0,0,0,1
+                                font_size: self.width*.25
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                    RelativeLayout:
+                        id: player_four_background
+                        player_color:(1,1,1,1)
+                        canvas.before:
+                            Color:
+                                rgba: self.player_color
+                            Rectangle:
+                                size: self.size
+                        BoxLayout:
+                            orientation: "horizontal"
+                            color: .1,.2,.1,1
+                            Label:
+                                text:"N"
+                                color: 0,0,0,1
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.width*1.2
+                                size_hint: .1,1
+                            Label:
+                                id: dealer_four
+                                text: ""
+                                color: .5,0,0,1
+                                size_hint: .5,1
+                                font_size: self.width*.2
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            Label:
+                                text: root.parent.player_four_name
+                                font_size: self.width*.08
+                                color: 0,0,0,1
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            Label:
+                                id: player_four_money
+                                size_hint: .3,.5
+                                pos_hint: {"center_y":.5, "right": .5}
+                                text: '0'
+                                color: 0,0,0,1
+                                font_size: self.width*.25
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                    BoxLayout:
+                        orientation: "horizontal"
+                        spacing: dp(10)
+                        Label:
+                            id: amount_label
+                            text: "Tai:"
+                            pos_hint: {'x':1}
+                            color: 0,0,0,1
+                            font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            font_size: self.width*.08
+                        TextInput: 
+                            id: amount_of_tai
+                            multiline: False
+                            size_hint: .3,None
+                            height: amount_label.height*.55
+                            font_size: self.width*.2
+                            pos_hint:{'center_y':.5, 'x':0}
+                            on_text_validate: root.submit_button()
+                        Button:
+                            id: submit_button
+                            text: 'Submit'
+                            size_hint: .3,None
+                            height: amount_of_tai.height
+                            font_size: self.height*.4
+                            font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            pos_hint:{'center_y':.5, 'x':.1}
+                            on_release: root.submit_button()
+
+            RelativeLayout:
+                canvas.before:
+                    Color:
+                        rgba: 1,1,1,1
+                    Rectangle:
+                        size: self.size
+                BoxLayout:
+                    orientation: "vertical"
+                    RelativeLayout:
+                        Widget:
+                            canvas.before:
+                                Color:
+                                    rgba: .6,.3,.5,.6
+                                Rectangle:
+                                    size: self.size 
+                        BoxLayout:
+                            orientation: "vertical"
+                            spacing: dp(5)
+                            padding: dp(10)
+                            size_hint: .5,1
+                            pos_hint: {"center_x":.5}
+                            Label:
+                                text: "Winner"
+                                font_size: self.height*.6
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            ToggleButton:
+                                id: winner_one
+                                text: root.parent.player_one_name 
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+                            ToggleButton:
+                                id: winner_two
+                                text:root.parent.player_two_name 
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+                            ToggleButton:
+                                id: winner_three
+                                text:root.parent.player_three_name
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+                            ToggleButton:
+                                id: winner_four
+                                text:root.parent.player_four_name
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+                    RelativeLayout:
+                        Widget:
+                            canvas.before:
+                                Color:
+                                    rgba: .6,.3,.1,.6
+                                Rectangle:
+                                    size: self.size
+                        BoxLayout:
+                            orientation: "vertical"
+                            spacing: dp(5)
+                            padding: dp(10)
+                            size_hint: .5,1
+                            pos_hint: {"center_x":.5}
+                            Label:
+                                text: "Loser"
+                                font_size: self.height*.6
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                            ToggleButton:
+                                id: loser_one
+                                text: root.parent.player_one_name 
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+                            ToggleButton:
+                                id: loser_two
+                                text:root.parent.player_two_name 
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+                            ToggleButton:
+                                id: loser_three
+                                text:root.parent.player_three_name
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+                            ToggleButton:
+                                id: loser_four
+                                text:root.parent.player_four_name
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+                            ToggleButton:
+                                id: self_touch
+                                text:"Self Touch"
+                                font_name: "C:\\Users\\User\\Desktop\\Python Project\\font\\Sackers-Gothic-Std-Light.ttf"
+                                font_size: self.height*.4
+
+        RelativeLayout:
+            size_hint: 1,.1
+            canvas.before:
+                Color:
+                    rgba: .9,.9,.9,1
+                Rectangle:
+                    size: self.size
+            BoxLayout:
+                size_hint: 1,1
+                orientation: "horizontal"
+                spacing: dp(40)
+                RelativeLayout:
+                    Button:
+                        text: "Back"
+                        font_size: dp(20)
+                        color: 0,0,0,1
+                        background_normal: ''
+                        background_color: .9,.9,.9,1
+                        pos_hint: {"left":0}
+                        on_release: root.parent.back_start_page()
+                RelativeLayout:
+                    Button:
+                        text: "UNDO"
+                        font_size: dp(20)
+                        color: 0,0,0,1
+                        background_normal: ''
+                        background_color: .9,.9,.9,1.
+                        pos_hint: {"right":1}
+                        on_release: root.undo_button_pressed()
+                RelativeLayout:
+                    Button:
+                        text: "DETAIL"
+                        font_size: dp(20)
+                        color: 0,0,0,1
+                        background_normal: ''
+                        background_color: .9,.9,.9,1
+                        pos_hint: {"right":1}
+                        on_release: root.parent.detail_page()
+                RelativeLayout:
+                    Button:
+                        id: finish_button
+                        text: "FINISH"
+                        font_size: dp(20)
+                        color: 0,0,0,1
+                        background_normal: ''
+                        background_color: .9,.9,.9,1
+                        pos_hint: {"right":1}
+                        on_release: root.parent.overall_rank_page()
+               
