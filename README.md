@@ -17,13 +17,13 @@ The user can click the **"RANK"** button to see the overall ranking of the group
 
 <img width="671" alt="image" src="https://user-images.githubusercontent.com/99929453/211145633-139311fb-47af-4502-93a6-11460601967f.png">
 #### Enter points for each hand
-The user enters point for each hand. The user clicks the both the winner and the loser of the hand
+The user enters point for each hand. The user clicks the both the winner and the loser of the hand<br>
 #### Dealer
-The dealer state will be automatically updated according to the winner of the hand. The round will be automatically updated when the current round ends.
+The dealer state will be automatically updated according to the winner of the hand. The round will be automatically updated when the current round ends.<br>
 #### UNDO
-The users can click undo if they misclicked any butrton and wants to modify it.
+The users can click undo if they misclicked any butrton and wants to modify it.<br>
 #### DETAIL
-The detail of each hand will be shown by clicking the **"DETAIL"** button.
+The detail of each hand will be shown by clicking the **"DETAIL"** button.<br>
 
 <img width="673" alt="image" src="https://user-images.githubusercontent.com/99929453/211145690-abc37bd4-fda2-49cf-9099-5a436fad079f.png">
 
