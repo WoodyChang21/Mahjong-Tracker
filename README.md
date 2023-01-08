@@ -17,7 +17,7 @@ The user can click the **"RANK"** button to see the overall ranking of the group
 
 ### GAME PAGE
 
-<img width="671" alt="image" src="https://user-images.githubusercontent.com/99929453/211145633-139311fb-47af-4502-93a6-11460601967f.png">
+<img width="686" alt="image" src="https://user-images.githubusercontent.com/99929453/211174954-cf0292cc-cd33-495b-ae09-317b880ade2a.png">
 
 #### Enter points for each hand
 The user enters point for each hand. The user clicks the both the winner and the loser of the hand<br>
